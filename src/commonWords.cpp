@@ -32,7 +32,7 @@ char ** commonWords(char *str1, char *str2) {
 			i++;
 		}
 		j = i;
-		while (str1[j] != ' '&&str1[i] != '\0')
+		while (str1[j] != ' '&&str1[j] != '\0')
 		{
 			j++;
 		}
