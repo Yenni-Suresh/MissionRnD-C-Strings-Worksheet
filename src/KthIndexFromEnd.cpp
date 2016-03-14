@@ -12,5 +12,17 @@ NOTES:
 */
 
 char KthIndexFromEnd(char *str, int K) {
-	return '\0';
+	if (str == "" || K<0 || str == nullptr)
+		return '\0';
+	int i = 0, j = -1;
+	while (str[i] != '\0')
+	{
+		i++;
+		if (i > K - 1)
+			j++;
+	}
+	if (j < 0)
+		return '\0';
+	else if (K == 0) return str[j];
+	else return str[j - 1];
 }
